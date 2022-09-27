@@ -1,3 +1,4 @@
+FROM lemonhope97/cicd
 RUN mkdir -p /cicd-zone
 WORKDIR /cicd-zone
 COPY . /cicd-zone
