@@ -1,4 +1,5 @@
 FROM lemonhope97/cicd
+RUN sudo -s
 RUN mkdir -p /cicd-zone
 WORKDIR /cicd-zone
 COPY . /cicd-zone
