@@ -1,4 +1,4 @@
-FROM lemonhope97/cicd:5.0
+FROM ubuntu:latest
 RUN mkdir -p /cicd-zone
 WORKDIR /cicd-zone
 COPY . /cicd-zone
