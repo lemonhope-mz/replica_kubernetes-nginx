@@ -1,4 +1,4 @@
-FROM lemonhope97/cicd
+FROM ubuntu:latest
 RUN su
 RUN mkdir -p /cicd-zone
 WORKDIR /cicd-zone
