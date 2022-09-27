@@ -2,6 +2,9 @@ node {
      stage('Clone repository') {
          checkout scm
      }
+     stage('docker 상태체크'){
+      sh 'docker ps'
+     }
      stage('Build image1') {
          app = docker.build("lemonhope97/cicd")
      }
