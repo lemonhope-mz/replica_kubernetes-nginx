@@ -2,20 +2,20 @@ node {
      stage('Clone repository') {
          checkout scm
      }
-     stage('Build image') {
+     stage('Build image1') {
          app = docker.build("lemonhope97/cicd")
      }
-     stage('Push image') {
+     stage('Push image1') {
          docker.withRegistry('https://registry.hub.docker.com', 'Dockerhub') {
              app.push("${env.BUILD_NUMBER}")
              app.push("latest")
          }
      }
 
-     stage('Build image') {
+     stage('Build image2') {
          app = docker.build("lemonhope97/cicd")
      }
-     stage('Push image') {
+     stage('Push image2') {
          docker.withRegistry('https://registry.hub.docker.com', 'Dockerhub')  {
              app.push("${env.BUILD_NUMBER}") 
              app.push("latest")
